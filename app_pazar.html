@@ -2402,7 +2402,7 @@ const MOBIL=matchMedia('(max-width:1060px), (pointer:coarse)').matches;   /* 16.
 const PTS=[]; const NP=MOBIL?300:520;
 for(let i=0;i<NP;i++){ const y=1-(i/(NP-1))*2, r=Math.sqrt(1-y*y), th=i*2.399963; PTS.push([Math.cos(th)*r, y, Math.sin(th)*r, Math.random()]); }
 const pulses=[]; for(let i=0;i<ENG.length*2;i++) pulses.push({n:i%ENG.length, p:Math.random(), s:.18+Math.random()*.25});
-function size(){ const r=cv.getBoundingClientRect(); if(!r.width||!r.height) return;   /* 20.11 · gizliyken (başka sekme / gizli çerçeve) 0 ölçüp boş kalmasın */ DPR=Math.min(MOBIL?2:(frame.agir?1.25:1.5),devicePixelRatio||1);   /* 19.11 · Mac Retina: tuval 1,5x (2x'in ~%56'sı piksel) — görünür fark yok, çizim çok daha hafif */ W=r.width; H=r.height; cv.width=W*DPR; cv.height=H*DPR; cx.setTransform(DPR,0,0,DPR,0,0); }
+function size(){ const r=cv.getBoundingClientRect(); if(!r.width||!r.height) return;   /* 20.11 · gizliyken (başka sekme / gizli çerçeve) 0 ölçüp boş kalmasın */ DPR=Math.min(MOBIL?1.6:(frame.agir?1.25:1.5),devicePixelRatio||1);   /* 24.11 · telefonda 2x→1,6x (%36 daha az piksel) */   /* 19.11 · Mac Retina: tuval 1,5x (2x'in ~%56'sı piksel) — görünür fark yok, çizim çok daha hafif */ W=r.width; H=r.height; cv.width=W*DPR; cv.height=H*DPR; cx.setTransform(DPR,0,0,DPR,0,0); }
 const _RGB={};   /* 16.11 · renk çözümü önbellekte (her karede yüzlerce çağrı) */
 function rgba(hex,a){ let c=_RGB[hex]; if(!c){ let h=String(hex).replace('#',''); if(h.length===3) h=h.split('').map(x=>x+x).join(''); const n=parseInt(h,16); c=_RGB[hex]=`rgba(${n>>16&255},${n>>8&255},${n&255},`; } return c+(Math.round(a*100)/100)+')'; }
 let colCache={}; let ZM=null;   // v4.5 zaman makinesi: seçili gün (null = bugün)
@@ -2455,7 +2455,7 @@ let t0=performance.now();
 let rGor=true, rSon=0;
 try{ new IntersectionObserver(es=>{ rGor=es.some(e=>e.isIntersecting); },{threshold:0}).observe(document.getElementById('reactor')); }catch(_){}
 function frame(now){ if(DUR||!cv.isConnected) return;
-  if(!RM&&(!rGor||document.hidden||(MOBIL&&now-rSon<30))){ requestAnimationFrame(frame); return; }   /* 19.11 · Mac'te 30 fps'e düşürme YOK (120 Hz ekranda 'kare kare' görünüyordu) — ağırsa parçacık ve çözünürlük azalır */
+  if(!RM&&(!rGor||document.hidden||window.__RXDUR||(MOBIL&&now-rSon<22))){ requestAnimationFrame(frame); return; }   /* 24.11 · telefonda eşik 30→22 ms: 60 Hz'de düzenli 30, 120 Hz'de düzenli 40 fps (30'da 120 Hz'de 3-4-5 kare arası seğiriyordu) · üstte tam ekran pencere açıkken çizmez */   /* 19.11 · Mac'te 30 fps'e düşürme YOK (120 Hz ekranda 'kare kare' görünüyordu) — ağırsa parçacık ve çözünürlük azalır */
   const _dt=Math.min(.1,rSon?(now-rSon)/1000:1/60);   /* 16.11 · görünmüyorsa çizme · telefonda / ağır cihazda 30 fps */
   rSon=now; const _c0=performance.now();
   const t=(now-t0)/1000;
