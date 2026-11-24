@@ -516,7 +516,7 @@ header.ust .ub-b{width:36px;height:36px;border-radius:50%}
 #egP.acik{animation:incO .22s ease forwards}
 #egP.kapan{animation:incO .2s ease reverse forwards}
 #egP.acik .inc-k{animation:incK .4s cubic-bezier(.2,.9,.25,1.15) both;transform-origin:var(--ox) var(--oy)}
-</style><script>/* pazar_uret · GÖMÜLÜ kip: CORTEX / ORBIT içinde çerçevede açılır */
+</style><script>/* pazar_uret · GÖMÜLÜ kip: HQ / LOUNGE içinde çerçevede açılır */
 document.documentElement.classList.add('gomulu');</script>
 <style id="gomulu-css">
 html.gomulu header.ust,html.gomulu #tabbar [data-v="profil"],html.gomulu #msjB,html.gomulu #msjP,html.gomulu #ptr,
@@ -524,7 +524,7 @@ html.gomulu #splash,html.gomulu #giris,html.gomulu #kilitE,html.gomulu #hos,html
 html.gomulu #kabuk{padding-top:8px}
 html.gomulu #tabbar{grid-template-columns:repeat(4,1fr)}
 </style>
-<style id="cx-reaktor-css">/* üretildi: index_yeni.html CORTEX reaktörü (pazar_uret) */
+<style id="cx-reaktor-css">/* üretildi: index_yeni.html HQ reaktörü (pazar_uret) */
 
 
 
@@ -2372,7 +2372,7 @@ function arkaPlan(){ const cv=$('#arka'); if(!cv||RM) return; const x=cv.getCont
 if('serviceWorker' in navigator) addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
 function uygulama(D){ return basla(D,AD||'Misafir',ANAH); }   /* sayfa_kontrol işareti · veri sözleşmesi: app_web.uret */
 </script>
-<script id="cx-reaktor">/* üretildi: index_yeni.html CORTEX reaktörü — yalnız CORTEX içinde açılınca (reaktor:"cortex") */
+<script id="cx-reaktor">/* üretildi: index_yeni.html HQ reaktörü — yalnız HQ içinde açılınca (reaktor:"cortex") */
 let REAKTOR="orbit", CXR=null;
 function cxReaktor(host,M){ const css=n=>getComputedStyle(host).getPropertyValue(n).trim();
   const ENG=M.nodes, FG={deger:M.fg}, R={genislik:M.gen,r1:M.ad}, K={esik_ac:M.esik}, kapiAcik=M.st==="up", coreCol=M.st==="up"?"up":M.st==="down"?"down":"warn", D={n_coin:M.n};
@@ -2408,7 +2408,7 @@ function rgba(hex,a){ let c=_RGB[hex]; if(!c){ let h=String(hex).replace('#','')
 let colCache={}; let ZM=null;   // v4.5 zaman makinesi: seçili gün (null = bugün)
 function cols(){ colCache={core:css('--'+(ZM?(ZM.a?'up':'down'):coreCol))||'#38d8ff', cyan:css('--cyan'), violet:css('--violet'), up:css('--up'), down:css('--down'), warn:css('--warn'), ink:css('--ink'), line:css('--ink3')}; ENG.forEach(g=>g.col=colCache[g.c]||colCache.cyan); }
 /* ===== v4.4 · JARVIS tarzı HUD katmanı (reaktörün etrafında) ===== */
-const HUDYAZI=String(M.yazi||'HC·CORTEX ◆ ').split('');
+const HUDYAZI=String(M.yazi||'HC·HQ ◆ ').split('');
 function yay(x,y,r,a0,a1,renk,kal,alfa){ cx.strokeStyle=rgba(renk,alfa); cx.lineWidth=kal; cx.beginPath(); cx.arc(x,y,r,a0,a1); cx.stroke(); }
 function hud(t,X,Y,S,R0,RN,core,beat){
   const ac=Math.min(1,t/1.6), ease=1-Math.pow(1-ac,3);          // açılış: halkalar 1,6 sn'de çizilerek gelir
@@ -2522,14 +2522,14 @@ if(window.ResizeObserver){ let _w=0,_h=0; new ResizeObserver(()=>{ const r=cv.ge
 
 
   startReactor(); return {dur(){ DUR=true; }}; }
-const CX_MARKA=`<div class="cxh-sol cxh-marka" aria-label="CORTEX"><svg class="hc-mk" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="cxLa" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5fe6ff"/><stop offset=".55" stop-color="#38a8ff"/><stop offset="1" stop-color="#8f6bff"/></linearGradient><linearGradient id="cxLb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#9fe9ff"/></linearGradient></defs><path d="M50.5 15.2 L32 4.5 L9.5 17.5 V46.5 L32 59.5 L50.5 48.8" fill="none" stroke="url(#cxLa)" stroke-width="6.5" stroke-linejoin="miter" stroke-linecap="butt"/><path d="M32 13 L17 21.7 V42.3 L32 51" fill="none" stroke="#38a8ff" stroke-opacity=".28" stroke-width="1.4"/><rect x="22" y="21" width="5.5" height="22" rx="1" class="hc-h" fill="url(#cxLa)"/><rect x="36.5" y="21" width="5.5" height="22" rx="1" class="hc-h" fill="url(#cxLa)"/><rect x="27.5" y="30" width="9" height="4" fill="url(#cxLa)"/><path d="M54 32 l3.2 -3.2 l3.2 3.2 l-3.2 3.2 z" fill="#8f6bff"/></svg><b class="hc-wm cx-wm">CORTEX</b><span id="cxhAlt" hidden></span></div>`;
+const CX_MARKA=`<div class="cxh-sol cxh-marka" aria-label="HQ"><svg class="hc-mk" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="cxLa" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5fe6ff"/><stop offset=".55" stop-color="#38a8ff"/><stop offset="1" stop-color="#8f6bff"/></linearGradient><linearGradient id="cxLb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#9fe9ff"/></linearGradient></defs><path d="M50.5 15.2 L32 4.5 L9.5 17.5 V46.5 L32 59.5 L50.5 48.8" fill="none" stroke="url(#cxLa)" stroke-width="6.5" stroke-linejoin="miter" stroke-linecap="butt"/><path d="M32 13 L17 21.7 V42.3 L32 51" fill="none" stroke="#38a8ff" stroke-opacity=".28" stroke-width="1.4"/><rect x="22" y="21" width="5.5" height="22" rx="1" class="hc-h" fill="url(#cxLa)"/><rect x="36.5" y="21" width="5.5" height="22" rx="1" class="hc-h" fill="url(#cxLa)"/><rect x="27.5" y="30" width="9" height="4" fill="url(#cxLa)"/><path d="M54 32 l3.2 -3.2 l3.2 3.2 l-3.2 3.2 z" fill="#8f6bff"/></svg><b class="hc-wm cx-wm">HQ</b><span id="cxhAlt" hidden></span></div>`;
 function cxM(){ const Z=pzDurum(), st=Z.st==='up'?'up':Z.st==='down'?'down':'warn', yz=v=>v==null?'':' '+pc(v), adK=String(Z.etiket||'').split(' ').pop();
   const N=[{id:'ana',n:adK,v:Z.ad,c:st,big:Z.ad+(Z.gun!=null?' · '+Z.gun+'. '+(Z.birim==='gün'?'gün':'seans'):''),d:Z.etiket+': pazarın genel eğilimi.'},
     {id:'gen',n:'GENİŞLİK',v:'%'+nf((Z.g||0)*100),c:(Z.g||0)>=(Z.es||.5)?'up':(Z.g||0)>=(Z.es||.5)-.15?'warn':'down',big:'%'+nf((Z.g||0)*100),d:'Yükseliş eğiliminde olanların oranı.'},
     ...(Z.a2?[{id:'a2',n:Z.a2.ad,v:'%'+nf((Z.a2.v||0)*100),c:(Z.a2.v||0)>=.5?'up':'down',big:'%'+nf((Z.a2.v||0)*100),d:'Bugün yükselenlerin oranı.'}]:[]),
     ...(Z.sol||[]).filter(r=>!/genişlik/i.test(r[0])).map((r,i)=>({id:'s'+i,n:String(r[0]).toLocaleUpperCase('tr'),v:r[1]+yz(r[2]),c:r[2]>0?'up':r[2]<0?'down':'cyan',big:r[1]+yz(r[2]),d:''}))].slice(0,8);
   return {nodes:N,st,fg:null,fgOran:Z.a2?Z.a2.v:null,fgYazi:Z.a2?Z.a2.ad+' %'+nf((Z.a2.v||0)*100):'',gen:Z.g||0,esik:Z.es,ad:Z.ad,n:Z.n,
-    yazi:`HC·CORTEX ◆ ${Z.etiket} ${Z.ad} ◆ GENİŞLİK %${nf((Z.g||0)*100)} ◆ ${Z.n||0} ${String(Z.nAd||'').toLocaleUpperCase('tr')} ◆ ${Z.pz||''} ◆ `}; }
+    yazi:`HC·HQ ◆ ${Z.etiket} ${Z.ad} ◆ GENİŞLİK %${nf((Z.g||0)*100)} ◆ ${Z.n||0} ${String(Z.nAd||'').toLocaleUpperCase('tr')} ◆ ${Z.pz||''} ◆ `}; }
 function cxHTML(){ const Z=pzDurum(), st=Z.st==='up'?'up':Z.st==='down'?'down':'warn';
   return `${eskiBant(Z)}<div id="cxR"><section class="cxhud ${st==='up'?'acik':''}"><div class="cxi"><div class="cxh-ust">${CX_MARKA}<div class="cxh-mrk"><small>${esc(Z.etiket)}</small><b style="color:var(--${st})">${esc(Z.ad)}</b>${Z.gun!=null?`<b style="color:var(--${st})">${Z.gunEn?'≥':''}${Z.gun}. ${Z.birim==='gün'?'GÜN':'SEANS'}</b>`:''}</div></div>
   <div class="hero"><div class="reactor" id="reactor"><canvas id="rc"></canvas><div class="core-txt"><div class="t1">${esc(Z.etiket)}</div><div class="t2" style="color:var(--${st})">${esc(Z.ad)}</div><div class="t3">${esc(Z.pz||'')}</div></div></div></div></div></section></div>`; }
