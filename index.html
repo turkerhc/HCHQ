@@ -3,22 +3,28 @@
 <!-- © 2026 Türker HC · HC HQ — Tüm hakları saklıdır. İzinsiz kopyalanamaz, çoğaltılamaz, dağıtılamaz. -->
 
 <style>
-html,body{margin:0;height:100%;background:#000;color:#e8eeff;font:15px system-ui,-apple-system,"Segoe UI",sans-serif}
+html,body{margin:0;height:100%;background:#000;color:#eef2f8;font:15px system-ui,-apple-system,"Segoe UI",sans-serif}
 #k{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;padding:24px;overflow:auto}
 form{width:min(340px,100%);display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center}
 form[hidden],#y[hidden]{display:none}
-.kt{font:700 18px system-ui,sans-serif;letter-spacing:.16em}.kt b{color:#38d8ff}
-.ks{font-size:13px;color:#9aa7c7;margin-bottom:6px;line-height:1.45}
-input[type=text],input[type=password]{width:100%;box-sizing:border-box;font:500 16px ui-monospace,Menlo,monospace;letter-spacing:.08em;text-align:center;padding:13px 14px;border-radius:14px;border:1px solid rgba(120,150,220,.3);background:#0b0f19;color:#e8eeff;outline:none}
-input:focus{border-color:#38d8ff;box-shadow:0 0 0 3px rgba(56,216,255,.18)}
-label{font-size:12.5px;color:#9aa7c7;display:flex;gap:8px;align-items:center}
-button{width:100%;padding:13px;border-radius:14px;border:0;background:#38d8ff;color:#001018;font:700 13px ui-monospace,Menlo,monospace;letter-spacing:.24em}
+.kt{font:700 18px system-ui,sans-serif;letter-spacing:.16em}.kt b{color:#d7dee9}
+.ks{font-size:13px;color:#a9b2c2;margin-bottom:6px;line-height:1.45}
+input[type=text],input[type=password]{width:100%;box-sizing:border-box;font:500 16px ui-monospace,Menlo,monospace;letter-spacing:.08em;text-align:center;padding:13px 14px;border-radius:14px;border:1px solid rgba(200,212,230,.3);background:#0b0f19;color:#eef2f8;outline:none}
+input:focus{border-color:#d7dee9;box-shadow:0 0 0 3px rgba(215,222,233,.18)}
+label{font-size:12.5px;color:#a9b2c2;display:flex;gap:8px;align-items:center}
+button{width:100%;padding:13px;border-radius:14px;border:0;background:#d7dee9;color:#0d1016;font:700 13px ui-monospace,Menlo,monospace;letter-spacing:.24em}
 button.lnk{background:none;color:#8fdcff;font:600 13px system-ui,sans-serif;letter-spacing:0;padding:6px}
 button:disabled{opacity:.6}.h{min-height:18px;font-size:12.5px;color:#ff4d7a;line-height:1.4}
 .ok{font-size:13px;color:#bff5de;border:1px solid rgba(44,242,166,.35);background:rgba(44,242,166,.07);border-radius:12px;padding:10px 12px;line-height:1.5}
-#y{font:600 11px ui-monospace,Menlo,monospace;letter-spacing:.3em;color:#5d6a8c}
+#y{font:600 11px ui-monospace,Menlo,monospace;letter-spacing:.3em;color:#6a7386}
 .c{position:fixed;bottom:max(14px,env(safe-area-inset-bottom));left:0;right:0;text-align:center;font-size:10.5px;color:#3c4660}
 .salla{animation:s .4s}@keyframes s{20%,60%{transform:translateX(-8px)}40%,80%{transform:translateX(8px)}}
+</style><style id="hq-platin">/* 24.11 · HQ platin palet */
+:root,:root[data-theme="dark"]{--glow:0 0 22px rgba(215,222,233,.12)}
+#pzSer button.on{color:#0d1016!important}
+:root[data-theme="light"] #pzSer button.on{background:linear-gradient(90deg,#2b313c,#4b5260)!important;color:#fff!important;box-shadow:0 6px 16px -8px rgba(20,23,28,.5)!important}
+:root[data-theme="light"] .hc-wm{background:linear-gradient(90deg,#1f242c,#5c6577)!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important;color:#1f242c!important}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]) #pzSer button.on{background:linear-gradient(90deg,#2b313c,#4b5260)!important;color:#fff!important}:root:not([data-theme="dark"]) .hc-wm{background:linear-gradient(90deg,#1f242c,#5c6577)!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important}}
 </style></head><body>
 <div id="k"><div id="y">YÜKLENİYOR…</div>
 <form id="f" hidden autocomplete="on"><div class="kt">HC<b>·</b>HQ</div><div class="ks">Kullanıcı adın ve şifrenle giriş yap</div>
